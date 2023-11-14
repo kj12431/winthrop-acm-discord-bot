@@ -17,7 +17,7 @@ bot = commands.Bot(command_prefix='!', intents=intents)
 async def on_ready():
     print(f'Logged in as {bot.user.name}')
 
-@bot.command(name='hello')
+@bot.command()
 async def hello(ctx):
     await ctx.send('hi there')
 
@@ -33,7 +33,7 @@ async def start_game(ctx, *players: discord.User):
 #=====================================================
 
 @bot.command(name='play_card')
-async def play_card():
+async def play_card(ctx):
     if tycoon == 1:
         pass
     
